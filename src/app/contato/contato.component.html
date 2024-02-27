@@ -1,0 +1,75 @@
+<app-header></app-header>
+<i class="bi bi-0-circle"></i>
+<!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2 class="text-success">Contato</h2>
+        
+        <h3 class="text-dark"><p>Deixe sua mensagem que entraremos em contato</p></h3>
+     
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="info">
+            <div class="address">
+            <i><img  src="../../assets/images/place-localizer.png"  class="img-fluid" alt="Sample image"></i> 
+              <h4>Local:</h4>
+              <p><strong> 01 Lote 47 São José, São Sebastião, 71693-01 </strong></p>
+              
+            </div>
+
+            <div class="email">
+              <i><img  src="../../assets/images/email.png"  class="img-fluid" alt="Sample image"></i> 
+              <h4>Email:</h4>
+              <p><strong> romerito.alencar@gmail.com </strong></p>
+              
+            </div>
+
+            <div class="phone">
+              <i><img  src="../../assets/images/phone.png"  class="img-fluid" alt="Sample image"></i> 
+              <h4>Telefone:</h4>
+              <p><strong> (61) 99581-7743 </strong></p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2713.139592866272!2d-47.76548774131194!3d-15.911228737210438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a1f87fde11535%3A0x6a9ac2402ca7ea80!2sQ.%201%20-%20S%C3%A3o%20Sebasti%C3%A3o%2C%20Brasilia%20-%20Federal%20District!5e0!3m2!1sen!2sbr!4v1694206865059!5m2!1sen!2sbr" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+          </div>
+
+        </div>
+
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name"><strong> Nome </strong></label>
+                <input type="text" name="name" class="form-control" id="name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name"><strong> Email </strong></label>
+                <input type="email" class="form-control" name="email" id="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name"><strong> Assunto </strong></label>
+              <input type="text" class="form-control" name="subject" id="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="name"><strong> Menssagem </strong></label>
+              <textarea class="form-control" name="message" rows="10" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Carregando</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit"><strong> Enviar Menssagem </strong></button></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <app-footer>

@@ -1,0 +1,189 @@
+<app-header></app-header>
+<section>
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+
+      <!-- Solicitar orçamento -->
+      <div class="col-md-8 col-lg-6 col-xl-8 offset-xl-0" *ngIf="showModeloIslustrativo">
+        <br>
+        <div role="alert">
+          <h2 style="animation-duration: 750ms;">Atenção!</h2>
+          
+          <hr>
+          <h4 class="text-dark"> O modelo abaixo é ilustrativo, será atualizado com suas informações de texto e imagem.
+          </h4>
+        </div>
+        <br>
+        <a href="../../assets/template-0001/index.html" target="_blank">
+          <img src="../../assets/images/site-responsivo-1.png" class="rounded mx-auto d-block"
+            title="Visualizar modelo ilustrativo">
+        </a>
+        <br>
+      </div>
+
+      <!-- Orçamento -->
+      <div class="d-flex justify-content-center">
+        <tr>
+          <td>
+            <form (ngSubmit)="solicitarOrcamento()">
+              <div class="text-primary pt-4">
+                <button type="submit" class="btn btn-success btn float-right"
+                  style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                  Solicitar Orçamento</button>
+              </div>
+            </form>
+          </td>
+          <td>
+            <form (ngSubmit)="consultarOrcamento()">
+              <div class="text-primary pt-4">
+                <button type="submit" class="btn btn-success btn float-right"
+                  style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                  Consultar Orçamento</button>
+              </div>
+            </form>
+          </td>
+        </tr>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section *ngIf="showOrcamento">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+
+      <!-- Solicitar orçamento -->
+      <div class="col-md-8 col-lg-6 col-xl-8 offset-xl-0">
+        <br>
+        <div class="form-outline mb-2">
+          <h6> <label for="item" class="fw-bolder text-success">Itens para criar</label></h6>
+          <table class="table table-borderless" class="col-xl-10 offset-xl-0">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                    <label class="form-check-label" for="flexSwitchCheckChecked" checked><strong> Hospedagem
+                      </strong></label>
+                  </div>
+
+                </th>
+                <th scope="col">
+
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                    <label class="form-check-label" for="flexSwitchCheckChecked"><strong> Domínio </strong></label>
+                  </div>
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="col">
+
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                    <label class="form-check-label" for="flexSwitchCheckChecked"><strong>Logomarcar</strong></label>
+                  </div>
+
+                </th>
+                <th scope="col">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                    <label class="form-check-label" for="flexSwitchCheckChecked"><strong>Email</strong></label>
+                  </div>
+
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="form-outline mb-2">
+          <h6> <label for="item" class="fw-bolder text-success">Descrição do site</label></h6>
+          <textarea class="form-control" id="descricao" name="dsChamado" rows="6"
+            formControlName="dsChamado"></textarea>
+        </div>
+        <div>
+          <h6> <label for="anexo" class="fw-bolder text-success">Anexar imagens do produto ou serviço, se tiver também
+              anexar Logomarcar e Bannes </label></h6>
+          <input class="form-control text-success" id="noArquivo" type="file" formControlName="noArquivo" multiple>
+        </div>
+
+        <br>
+
+        <div class="justify-content-center text-center">
+          <button type="submit" class="form-control btn btn-success">Enviar</button>
+        </div>
+
+        <br>
+        <form  (ngSubmit)="cancelar()">
+          <div class="justify-content-center text-center">
+            <button type="submit" class="form-control btn btn-light" routerLink="/site">Cancelar</button>
+          </div>
+        </form>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+<section *ngIf="showTableOrcamento">
+  <br>
+  <div class="table-responsive">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+
+        <!-- Solicitar orçamento -->
+        <div class="col-md-8 col-lg-6 col-xl-8 offset-xl-0">
+          <table class="table">
+            <caption>Lista de orçamentos </caption>
+            <thead class="table-success">
+              <tr>
+                <th scope="col"></th>
+                <th class="col-lg-2" scope="col">Cod. Orçamento</th>
+                <th class="col-lg-2" scope="col">Prazo de entrega</th>
+                <th scope="col">Valor Total</th>
+                <th scope="col">Data Início</th>
+                <th class="col-lg-2" scope="col">Data Entrega</th>
+                <th class="col-lg-3">Aprovar Orçamento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><strong> OC20230908 </strong></td>
+                <td>15 Dias</td>
+                <td>R$7.499,00</td>
+                <td>08/09/2023</td>
+                <td>08/09/2023</td>
+                <td><app-pagamento></app-pagamento></td>
+              </tr>
+            </tbody>
+            
+          </table>
+         
+          <nav aria-label="Paginas de chamados">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <button class="page-link text-success" type="submit">Anterior</button>
+              </li>
+              <li class="page-item active" aria-current="page">
+                <span class="page-link bg-success">1</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link text-success" type="submit">Próxima</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<app-footer></app-footer>
+

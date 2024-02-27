@@ -1,0 +1,19 @@
+ h2{
+   font-size: 4em;
+   font-family: serif;
+   color:#c20d0d;
+   text-align: left;
+   animation: animate 1.5s linear infinite;
+ } 
+  
+ @keyframes animate{
+   0%{
+     opacity: 0;
+   }
+   50%{
+     opacity: 0.7;
+   }
+   100%{
+     opacity: 0;
+   }
+ }
